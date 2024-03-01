@@ -203,6 +203,10 @@ std::string makeStringBoard()
 
 bool hasWinner(char& win_symb)
 {
+	if (win_symb == '*') { logger("X won due to time limit"); return true; }
+	if (win_symb == '@') { logger("O won due to time limit"); return true; }
+
+
 	if ((pst[1] == 'X' && pst[2] == 'X' && pst[3] == 'X') ||
 		(pst[4] == 'X' && pst[5] == 'X' && pst[6] == 'X') ||
 		(pst[7] == 'X' && pst[8] == 'X' && pst[9] == 'X') ||
@@ -256,6 +260,7 @@ void make_move(SOCKET player, char symb)
 	int num = chnum[0] - 48;
 	if (pst[num] != 'X' && pst[num] != 'O') { pst[num] = symb; }
 
+
 	std::string mes = "player went " + std::to_string(num);
 	logger(mes);
 }
@@ -295,11 +300,21 @@ void startGame(int i1, int i2)
 		// making moves
 		if ((made_moves % 2) == 0) {
 			logger("first player can move");
-			make_move(first_player, 'X');
+
+			long long startTime = clock(); // отсюда начинаем считать время хода
+			make_move(first_player, 'X');  // игрок ходит
+			long long finalTime = clock(); // здесь заканчиваем считать время хода
+
+			if ((finalTime - startTime) > countdown) { win_symb = '@'; }
 		}
 		else {
 			logger("second player can move");
+
+			long long startTime = clock();
 			make_move(second_player, 'O');
+			long long finalTime = clock();
+
+			if ((finalTime - startTime) > countdown) { win_symb = '*'; }
 		}
 
 		made_moves++;
@@ -315,10 +330,20 @@ void startGame(int i1, int i2)
 			send(first_player, "You triumphed!!!", 17, 0);
 			send(second_player, "You are defeated", 17, 0);
 		}
-		else
+		else if (win_symb == 'O')
 		{
 			send(second_player, "You triumphed!!!", 17, 0);
-			send(first_player, "You are defeated...", 17, 0);
+			send(first_player, "You are defeated", 17, 0);
+		}
+		else if (win_symb == '*')
+		{
+			send(first_player, "You won due time", 17, 0);
+			send(second_player, "timelimit exceed", 17, 0);
+		}
+		else if (win_symb == '@')
+		{
+			send(second_player, "You won due time", 17, 0);
+			send(first_player, "timelimit exceed", 17, 0);
 		}
 	}
 };

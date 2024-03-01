@@ -1,0 +1,46 @@
+>>Fri Mar  1 16:59:19 2024
+ logger's opened
+>>Fri Mar  1 16:59:19 2024
+ data from config's been read
+>>Fri Mar  1 16:59:19 2024
+ Listener's been successfully set
+>>Fri Mar  1 16:59:19 2024
+ searching for 2 sockets started
+>>Fri Mar  1 16:59:20 2024
+ connection's been accepted
+>>Fri Mar  1 16:59:20 2024
+ client's been connected
+>>Fri Mar  1 16:59:29 2024
+ user's logged in
+>>Fri Mar  1 16:59:29 2024
+ client's been authorized
+>>Fri Mar  1 16:59:29 2024
+ connection's been accepted
+>>Fri Mar  1 16:59:29 2024
+ client's been connected
+>>Fri Mar  1 16:59:32 2024
+ user's logged in
+>>Fri Mar  1 16:59:32 2024
+ client's been authorized
+>>Fri Mar  1 16:59:32 2024
+ the pair of players is found
+>>Fri Mar  1 16:59:32 2024
+ splitting up into teams is finished
+>>Fri Mar  1 16:59:32 2024
+ first player can move
+>>Fri Mar  1 16:59:35 2024
+ player went 1
+>>Fri Mar  1 16:59:35 2024
+ second player can move
+>>Fri Mar  1 16:59:37 2024
+ player went 2
+>>Fri Mar  1 16:59:37 2024
+ first player can move
+>>Fri Mar  1 16:59:51 2024
+ player went 3
+>>Fri Mar  1 16:59:51 2024
+ O won due to time limit
+>>Fri Mar  1 16:59:51 2024
+ O won due to time limit
+>>Fri Mar  1 16:59:51 2024
+ searching for 2 sockets started
