@@ -1,0 +1,20 @@
+>>Fri Mar  1 15:46:13 2024
+ log file's been opened
+>>Fri Mar  1 15:46:13 2024
+ Client's connected
+>>Fri Mar  1 15:46:15 2024
+ Successful authorization!
+>>Fri Mar  1 15:46:20 2024
+ player can move
+>>Fri Mar  1 15:46:23 2024
+ player went 2
+>>Fri Mar  1 15:46:33 2024
+ player can move
+>>Fri Mar  1 15:46:37 2024
+ player went 9
+>>Fri Mar  1 15:46:39 2024
+ game's over
+>>Fri Mar  1 15:46:42 2024
+ player refused to play again
+>>Fri Mar  1 15:46:42 2024
+ end session
